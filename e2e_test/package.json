@@ -1,0 +1,26 @@
+{
+  "name": "e2e_test",
+  "version": "1.0.0",
+  "description": "Prueba de Automatización E2E con Cypress.io",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "testing",
+    "opencart",
+    "automation"
+  ],
+  "author": "Paul Delgado",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.5.0"
+  }
+}
