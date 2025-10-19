@@ -29,22 +29,18 @@ Cobertura: Flujo completo de Guest Checkout
 ✅ Los selectores de país y región funcionan correctamente
 ✅ La confirmación final muestra el mensaje esperado correctamente
 
-
 2.2 OBSERVACIONES Y ÁREAS DE MEJORA
 ───────────────────────────────────────────────────────────────
-⚠️ TIEMPOS DE CARGA: Se observaron tiempos de respuesta variables 
-   entre acciones. Se implementaron waits estratégicos para 
-   garantizar estabilidad.
+⚠️ TIEMPOS DE CARGA: Se observaron tiempos de respuesta variables entre acciones.
+Se implementaron waits estratégicos para garantizar estabilidad.
 
-⚠️ ELEMENTOS DINÁMICOS: Algunos elementos del carrito y checkout 
-   cargan de forma asíncrona, requiriendo timeouts adicionales.
+⚠️ ELEMENTOS DINÁMICOS: Algunos elementos del carrito y checkout cargan de forma asíncrona, requiriendo timeouts adicionales.
 
-⚠️ ALERTAS DE ÉXITO: Las alertas de "Success" al agregar productos 
-   a veces tardan en aparecer, se ajustó el timeout a 10 segundos.
+⚠️ ALERTAS DE ÉXITO: Las alertas de "Success" al agregar productos a veces tardan en aparecer, se ajustó el timeout a 10 segundos.
 
-⚠️ TRANSICIONES DE PÁGINA: Las transiciones entre pasos del checkout 
-   requieren esperas para asegurar que los elementos estén disponibles.
+⚠️ TRANSICIONES DE PÁGINA: Las transiciones entre pasos del checkout requieren esperas para asegurar que los elementos estén disponibles.
 
+⚠️ ENRUTAMIENTO: La definición de rutas suele crear elementos conflictivos en las pruebas.
 
 2.3 ESTABILIDAD DE SELECTORES
 ───────────────────────────────────────────────────────────────
@@ -52,7 +48,6 @@ Cobertura: Flujo completo de Guest Checkout
 ✅ Los selectores por contenido de texto funcionan bien para botones
 ⚠️ Algunos selectores de clase podrían ser más específicos para 
    evitar ambigüedades futuras
-
 
 3. COBERTURA DE LA PRUEBA
 ═══════════════════════════════════════════════════════════════
@@ -71,16 +66,6 @@ FUNCIONALIDADES CUBIERTAS:
 ✓ Confirmación de método de pago
 ✓ Confirmación final de la orden
 ✓ Verificación del mensaje de éxito
-
-FUNCIONALIDADES NO CUBIERTAS (Fuera del alcance):
-- Checkout con cuenta registrada
-- Edición de cantidades en el carrito
-- Eliminación de productos del carrito
-- Aplicación de cupones de descuento
-- Validación de campos con datos inválidos
-- Flujo de compra con múltiples direcciones
-- Proceso de devolución/reembolso
-
 
 4. ANÁLISIS DE RIESGOS
 ═══════════════════════════════════════════════════════════════
