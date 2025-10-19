@@ -12,7 +12,6 @@ El proyecto incluye:
 ## 🛠️ Tecnologías utilizadas
 
 - [Cypress](https://www.cypress.io/): Framework para pruebas E2E.
-- [Chai](https://www.chaijs.com/): Librería de aserciones para JavaScript.
 - [Swagger Petstore API](https://petstore.swagger.io/): API de ejemplo para pruebas de integración.
 
 ## 🚀 Instalación
