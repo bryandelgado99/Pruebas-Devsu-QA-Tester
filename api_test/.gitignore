@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+
+# Archivos de reportes, screenshots y videos
+cypress/screenshots/
+cypress/videos/
+mochawesome-report/
+allure-results/
+
+# Archivos de configuracion o logs locales
+.env
+*.log
+
+# Archivos del IDE
+.vscode/
+.idea/
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db

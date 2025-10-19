@@ -1,0 +1,26 @@
+{
+  "name": "api_test",
+  "version": "1.0.0",
+  "description": "API Test for QA Assignment, made with Cypress.io",
+  "license": "ISC",
+  "author": "Paul Delgado",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --headless",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "testing",
+    "opencart",
+    "automation"
+  ],
+  "devDependencies": {
+    "cypress": "^15.5.0"
+  }
+}
