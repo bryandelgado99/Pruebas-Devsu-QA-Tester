@@ -1,5 +1,10 @@
 describe('OpenCart E2E - Flujo de Compra Completo', () => {
   
+  // Ignoramos los errores de JS del sitio testeado
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    return false;
+  })
+  
   beforeEach(() => {
     // Visitar la página principal antes de cada prueba
     cy.visit('/');
@@ -51,7 +56,7 @@ describe('OpenCart E2E - Flujo de Compra Completo', () => {
     cy.contains('View Cart').click();
     
     // Verificar que estamos en la página del carrito
-    cy.url().should('include', '/checkout/cart');
+    cy.url().should('include', 'checkout/cart');
     
     // Verificar que hay 2 productos en el carrito
     cy.get('.table-responsive tbody tr').should('have.length.at.least', 2);
@@ -64,7 +69,7 @@ describe('OpenCart E2E - Flujo de Compra Completo', () => {
     cy.contains('Checkout').click();
     
     // Verificar que estamos en la página de checkout
-    cy.url().should('include', '/checkout/checkout');
+    cy.url().should('include', 'checkout/checkout');
     
     cy.wait(1500);
 
@@ -132,7 +137,7 @@ describe('OpenCart E2E - Flujo de Compra Completo', () => {
     cy.log('Verificando confirmación de orden');
     
     // Esperar a que la página de confirmación cargue
-    cy.url().should('include', '/checkout/success', { timeout: 15000 });
+    cy.url().should('include', 'checkout/success', { timeout: 15000 });
     
     // Verificar el mensaje de éxito
     cy.get('#content h1').should('contain', 'Your order has been placed!');

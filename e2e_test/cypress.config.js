@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress');
+import { defineConfig } from 'cypress';
 
 module.exports = defineConfig({
   e2e: {
@@ -8,8 +8,9 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     video: true,
     screenshotOnRunFailure: true,
+    supportFile: false,
     setupNodeEvents(on, config) {
-      // Event Listeners de Node, en caso de ser necesarios
     },
+    chromeWebSecurity: false
   },
 });
